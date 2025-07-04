@@ -1,0 +1,292 @@
+* {
+  box-sizing: border-box; /* 박스 크기 계산 방식을 border-box로 설정 */
+  margin: 0; /* 모든 요소의 기본 마진(바깥 여백) 제거 */
+  padding: 0; /* 모든 요소의 기본 패딩(안쪽 여백) 제거 */
+}
+
+/* ==================================== */
+/* 🎨 기본 스타일 (데스크톱 기준) */
+/* ==================================== */
+body {
+  font-family: "Noto Sans KR", Arial, sans-serif; /* Google Fonts Noto Sans KR 적용 */
+  font-size: 1rem; /* 기본 글자 크기를 1rem으로 설정 */
+  line-height: 1.6; /* 줄 간격을 1.6배로 설정하여 가독성 높이기 */
+  color: #333; /* 기본 글자색을 진한 회색으로 설정 */
+  background-color: #f8f9fa; /* 배경색을 아주 연한 회색으로 설정 */
+  scroll-behavior: smooth; /* 부드러운 스크롤 효과 */
+}
+
+a {
+  text-decoration: none; /* 링크의 밑줄 제거 */
+  color: #007bff; /* 링크 색상을 파란색으로 설정 */
+}
+
+a:hover {
+  text-decoration: underline; /* 마우스를 올렸을 때 밑줄 다시 표시 */
+}
+
+/* 섹션 제목 스타일 */
+.section-heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #343a40;
+  margin-bottom: 3rem;
+  position: relative;
+  padding-bottom: 0.5rem;
+}
+
+.section-heading::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #007bff;
+  border-radius: 2px;
+}
+
+/* ==================================== */
+/* 헤더 및 내비게이션 바 */
+/* ==================================== */
+#mainNavbar {
+  transition: background-color 0.3s ease-in-out, padding 0.3s ease-in-out;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  background-color: transparent; /* 초기 투명 */
+  border-bottom: none; /* 초기 테두리 없음 */
+}
+
+#mainNavbar .navbar-brand {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #fff; /* 초기 글자색 흰색 */
+  transition: color 0.3s ease-in-out;
+}
+
+#mainNavbar .nav-link {
+  color: rgba(255, 255, 255, 0.7); /* 초기 메뉴 링크 글자색 */
+  font-weight: 500;
+  transition: color 0.3s ease-in-out;
+}
+
+#mainNavbar .nav-link:hover,
+#mainNavbar .nav-link.active {
+  color: #fff; /* 호버 및 활성화 시 흰색 */
+}
+
+/* 스크롤 시 내비게이션 바 스타일 */
+#mainNavbar.scrolled {
+  background-color: #343a40; /* 스크롤 시 어두운 배경 */
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#mainNavbar.scrolled .navbar-brand {
+  color: #fff;
+}
+
+#mainNavbar.scrolled .nav-link {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+#mainNavbar.scrolled .nav-link:hover,
+#mainNavbar.scrolled .nav-link.active {
+  color: #fff;
+}
+
+/* ==================================== */
+/* 홈 섹션 (Hero) */
+/* ==================================== */
+.hero-section {
+  height: 100vh; /* 뷰포트 높이의 100% */
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url("/Users/admin/Documents/dev/portfolio.github.io/img/backgroud.gif")
+      no-repeat center center; /* 배경 이미지 + 오버레이 */
+  background-size: cover; /* 배경 이미지가 요소를 완전히 덮도록 크기 조절 */
+  background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
+  background-position: center center; /* 배경 이미지를 중앙에 배치 */
+  background-attachment: fixed; /* 스크롤해도 배경 이미지가 고정되도록 (선택 사항) */
+  color: #fff;
+}
+
+.hero-section h1 {
+  font-size: 5rem; /* 더 큰 제목 */
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.hero-section .lead {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* ==================================== */
+/* 소개 섹션 */
+/* ==================================== */
+#about {
+  background-color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+.profile-img {
+  width: 280px;
+  height: 360x;
+  object-fit: cover;
+  border: 5px solid #ffffff;
+}
+
+#about p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 1rem;
+}
+
+/* ==================================== */
+/* 포트폴리오 섹션 */
+/* ==================================== */
+#portfolio {
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fit,
+    minmax(300px, 1fr)
+  ); /* 반응형 그리드 */
+  gap: 2rem; /* 항목 간 간격 */
+}
+
+.portfolio-item {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  border: none; /* 부트스트랩 기본 테두리 제거 */
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.portfolio-item:hover {
+  transform: translateY(-5px); /* 호버 시 살짝 위로 */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15) !important; /* 그림자 강화 */
+}
+
+.portfolio-item .card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.portfolio-item .card-body {
+  padding: 1.5rem;
+}
+
+.portfolio-item .card-title {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.portfolio-item .card-text.small {
+  margin-bottom: 1rem;
+}
+
+.portfolio-item .btn {
+  font-size: 0.9rem;
+}
+
+/* ==================================== */
+/* 연락처 섹션 */
+/* ==================================== */
+#contact {
+  background-color: #fff;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+#contact .form-label {
+  font-weight: 500;
+}
+
+#contact .btn-lg {
+  padding: 0.8rem 1.5rem;
+  font-size: 1.2rem;
+}
+
+/* ==================================== */
+/* 푸터 섹션 */
+/* ==================================== */
+footer {
+  padding: 2rem 0; /* 푸터 패딩 */
+  background-color: #212529 !important; /* Bootstrap bg-dark */
+  color: rgba(255, 255, 255, 0.6) !important; /* Bootstrap text-white-50 */
+  font-size: 0.9rem;
+}
+
+/* ==================================== */
+/* 📱 미디어 쿼리 (데스크톱 우선) */
+/* ==================================== */
+
+/* 태블릿 (화면 너비 최대 991px, Bootstrap md breakpoint) */
+@media (max-width: 991.98px) {
+  .hero-section h1 {
+    font-size: 4rem;
+  }
+  .hero-section .lead {
+    font-size: 1.5rem;
+  }
+
+  .section-heading {
+    font-size: 2rem;
+  }
+
+  #portfolio-grid {
+    grid-template-columns: repeat(
+      auto-fit,
+      minmax(280px, 1fr)
+    ); /* 2열 또는 1열 */
+    gap: 1.5rem;
+  }
+
+  .profile-img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+/* 모바일 (화면 너비 최대 767px, Bootstrap sm breakpoint) */
+@media (max-width: 767.98px) {
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+  .hero-section .lead {
+    font-size: 1.25rem;
+  }
+
+  .section-heading {
+    font-size: 1.8rem;
+  }
+
+  #mainNavbar {
+    padding-top: 0.8rem; /* 모바일에서는 항상 축소된 헤더처럼 */
+    padding-bottom: 0.8rem;
+    background-color: #343a40; /* 모바일에서는 항상 어두운 배경 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+
+  #mainNavbar .navbar-brand,
+  #mainNavbar .nav-link {
+    color: #fff !important; /* 모바일에서 메뉴 글자색 고정 */
+  }
+
+  #portfolio-grid {
+    grid-template-columns: 1fr; /* 단일 열 레이아웃 */
+    gap: 1rem;
+  }
+
+  #about .profile-img {
+    margin-bottom: 2rem; /* 모바일에서 이미지 아래 여백 */
+  }
+}
