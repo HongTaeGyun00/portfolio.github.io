@@ -47,13 +47,4 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   });
-
-  // 프로젝트 카드 호버 효과 (CSS로 처리)
-  // 이미지 로딩 오류 처리 (선택 사항)
-  document.querySelectorAll(".portfolio-item img").forEach((img) => {
-    img.onerror = function () {
-      img.src =
-        "https://via.placeholder.com/400x250/cccccc/000000?text=Image+Not+Found"; // 대체 이미지
-    };
-  });
 });
