@@ -73,7 +73,7 @@ a:hover {
 
 #mainNavbar .nav-link:hover,
 #mainNavbar .nav-link.active {
-  color: #fff; /* 호버 및 활성화 시 흰색 */
+  color: #fff;
 }
 
 /* 스크롤 시 내비게이션 바 스타일 */
