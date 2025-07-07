@@ -75,9 +75,7 @@
         <div class="container">
           <h1 class="display-1 fw-bold mb-3">TAEGYUN HONG</h1>
           <p class="lead mb-4">Solo Developer</p>
-          <a href="#portfolio" class="btn btn-outline-light btn-lg"
-            >View My Work</a
-          >
+          <a href="#about" class="btn btn-outline-light btn-lg">About Me</a>
         </div>
       </section>
 
@@ -86,14 +84,29 @@
         <div class="container">
           <h2 class="text-center mb-5 section-heading">About Me</h2>
           <div class="row align-items-center">
-            <div class="col-md-4 text-center mb-4 mb-md-0">
+            <div class="col-md-4 text-center mb-4 mb-md-0 align-self-start">
+              <!-- 프로필 사진이 텍스트의 시작점과 맞춰지도록 align-self-start 추가 -->
               <img
-                src="profile-img.jpg"
+                src="img/profile-img.jpg"
                 class="img-fluid rounded-circle profile-img"
                 alt="Profile Picture"
               />
             </div>
             <div class="col-md-8">
+              <!-- 1. 개인 정보 항목 배치 -->
+              <h3 class="mb-3">Personal Details</h3>
+              <dl class="row mb-4">
+                <dt class="col-sm-3">이름</dt>
+                <dd class="col-sm-9">홍태균</dd>
+                <dt class="col-sm-3">나이</dt>
+                <dd class="col-sm-9">26세</dd>
+                <dt class="col-sm-3">MBTI</dt>
+                <dd class="col-sm-9">ISFJ</dd>
+                <!-- 추가하고 싶은 항목이 있다면 여기에 dt와 dd를 추가하세요 -->
+              </dl>
+
+              <hr class="my-4" />
+              <!-- 2. 자기소개 문단 배치 -->
               <p class="lead">
                 안녕하세요! 사용자의 편리함을 최우선으로 생각하는 1인 개발자
                 홍태균입니다. 새로운 기술을 배우고 적용하는 것에 열정적이며,
@@ -108,7 +121,10 @@
                 보여드리고자 합니다. 함께 성장하고 멋진 결과물을 만들어갈 기회를
                 기대합니다.
               </p>
+
               <hr class="my-4" />
+
+              <!-- 3. 기술 스택 배치 -->
               <h3 class="mb-3">Skills</h3>
               <div class="d-flex flex-wrap gap-2">
                 <span class="badge bg-primary fs-6 p-2">HTML5</span>
@@ -129,86 +145,92 @@
       <section id="portfolio" class="py-5 bg-light">
         <div class="container">
           <h2 class="text-center mb-5 section-heading">My Portfolio</h2>
-          <div id="portfolio-grid" class="row">
-            <!-- 프로젝트 카드 1 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card portfolio-item h-100 shadow-sm">
-                <img
-                  src="https://via.placeholder.com/400x250/007bff/ffffff?text=Project+1"
-                  class="card-img-top"
-                  alt="프로젝트 1 이미지"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">프로젝트 제목 1</h5>
-                  <p class="card-text text-muted small">
-                    #HTML #CSS #JavaScript
-                  </p>
-                  <p class="card-text flex-grow-1">
-                    이 프로젝트는 [간단한 설명]을 위해 개발되었습니다.
-                  </p>
-                  <div class="mt-auto d-flex justify-content-between">
-                    <a href="#" class="btn btn-outline-dark btn-sm"
-                      ><i class="fas fa-code"></i> Source Code</a
-                    >
-                    <a href="#" class="btn btn-outline-primary btn-sm"
-                      ><i class="fas fa-link"></i> Demo</a
-                    >
-                  </div>
+          <div id="portfolio-grid">
+            <!-- ✨ 하고 싶은 프로젝트 카드 1: AI 기반 개인 비서 PWA ✨ -->
+            <div class="card portfolio-item h-100 shadow-sm">
+              <img
+                src="img/AI-Assistant.png"
+                class="card-img-top"
+                alt="AI 기반 개인 비서 PWA 이미지"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">AI 기반 개인 비서 PWA</h5>
+                <p class="card-text text-muted small">
+                  #React #Node.js #WebSpeechAPI #PWA
+                </p>
+                <p class="card-text flex-grow-1">
+                  음성 명령을 인식하고 처리하여 일정을 관리하거나 정보를
+                  검색해주는 개인 비서 프로그레시브 웹 앱(PWA)을 개발하고
+                  싶습니다. 오프라인 기능과 푸시 알림도 구현합니다.
+                </p>
+                <div class="mt-auto d-flex justify-content-between">
+                  <a href="#" class="btn btn-outline-dark btn-sm"
+                    ><i class="fas fa-code"></i> Source Code (미정)</a
+                  >
+                  <a href="#" class="btn btn-outline-primary btn-sm"
+                    ><i class="fas fa-link"></i> Demo (미정)</a
+                  >
                 </div>
               </div>
             </div>
-            <!-- 프로젝트 카드 2 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card portfolio-item h-100 shadow-sm">
-                <img
-                  src="https://via.placeholder.com/400x250/28a745/ffffff?text=Project+2"
-                  class="card-img-top"
-                  alt="프로젝트 2 이미지"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">프로젝트 제목 2</h5>
-                  <p class="card-text text-muted small">
-                    #React #Node.js #MongoDB
-                  </p>
-                  <p class="card-text flex-grow-1">
-                    이 프로젝트는 [간단한 설명]을 위한 웹 애플리케이션입니다.
-                  </p>
-                  <div class="mt-auto d-flex justify-content-between">
-                    <a href="#" class="btn btn-outline-dark btn-sm"
-                      ><i class="fas fa-code"></i> Source Code</a
-                    >
-                    <a href="#" class="btn btn-outline-primary btn-sm"
-                      ><i class="fas fa-link"></i> Demo</a
-                    >
-                  </div>
+
+            <!-- ✨ 하고 싶은 프로젝트 카드 2: 실시간 멀티플레이어 웹 게임 ✨ -->
+            <div class="card portfolio-item h-100 shadow-sm">
+              <img
+                src="img/Web-Game.png"
+                class="card-img-top"
+                alt="실시간 멀티플레이어 웹 게임 이미지"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">실시간 멀티플레이어 웹 게임</h5>
+                <p class="card-text text-muted small">
+                  #JavaScript #WebSockets #Express.js
+                </p>
+                <p class="card-text flex-grow-1">
+                  웹소켓을 활용하여 여러 사용자가 동시에 접속해 함께 즐길 수
+                  있는 실시간 캐주얼 게임을 만들고 싶습니다. 클라이언트-서버간
+                  통신 및 동기화 기술을 학습합니다.
+                </p>
+                <div class="mt-auto d-flex justify-content-between">
+                  <a href="#" class="btn btn-outline-dark btn-sm"
+                    ><i class="fas fa-code"></i> Source Code (미정)</a
+                  >
+                  <a href="#" class="btn btn-outline-primary btn-sm"
+                    ><i class="fas fa-link"></i> Demo (미정)</a
+                  >
                 </div>
               </div>
             </div>
-            <!-- 프로젝트 카드 3 -->
-            <div class="col-lg-4 col-md-6 mb-4">
-              <div class="card portfolio-item h-100 shadow-sm">
-                <img
-                  src="https://via.placeholder.com/400x250/ffc107/333333?text=Project+3"
-                  class="card-img-top"
-                  alt="프로젝트 3 이미지"
-                />
-                <div class="card-body d-flex flex-column">
-                  <h5 class="card-title fw-bold">프로젝트 제목 3</h5>
-                  <p class="card-text text-muted small">#Vue.js #Firebase</p>
-                  <p class="card-text flex-grow-1">
-                    이 프로젝트는 [간단한 설명]을 목표로 하는 SPA입니다.
-                  </p>
-                  <div class="mt-auto d-flex justify-content-between">
-                    <a href="#" class="btn btn-outline-dark btn-sm"
-                      ><i class="fas fa-code"></i> Source Code</a
-                    >
-                    <a href="#" class="btn btn-outline-primary btn-sm"
-                      ><i class="fas fa-link"></i> Demo</a
-                    >
-                  </div>
+
+            <!-- ✨ 하고 싶은 프로젝트 카드 3: 증강현실(AR) 웹 체험 ✨ -->
+            <div class="card portfolio-item h-100 shadow-sm">
+              <img
+                src="img/Web-AR.png"
+                class="card-img-top"
+                alt="증강현실(AR) 웹 체험
+              이미지"
+              />
+              <div class="card-body d-flex flex-column">
+                <h5 class="card-title fw-bold">증강현실(AR) 웹 체험 페이지</h5>
+                <p class="card-text text-muted small">
+                  #HTML #JavaScript #Three.js #WebXR
+                </p>
+                <p class="card-text flex-grow-1">
+                  웹 브라우저에서 카메라를 통해 현실 공간에 가상 객체를 띄우는
+                  간단한 증강현실(AR) 체험 페이지를 구현하고 싶습니다. WebXR
+                  API와 3D 라이브러리 활용을 목표로 합니다.
+                </p>
+                <div class="mt-auto d-flex justify-content-between">
+                  <a href="#" class="btn btn-outline-dark btn-sm"
+                    ><i class="fas fa-code"></i> Source Code (미정)</a
+                  >
+                  <a href="#" class="btn btn-outline-primary btn-sm"
+                    ><i class="fas fa-link"></i> Demo (미정)</a
+                  >
                 </div>
               </div>
             </div>
+
             <!-- 더 많은 프로젝트 카드를 여기에 추가하세요! -->
           </div>
         </div>

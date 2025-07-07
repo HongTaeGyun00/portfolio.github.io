@@ -103,7 +103,7 @@ a:hover {
 .hero-section {
   height: 100vh; /* 뷰포트 높이의 100% */
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url("backgroud.gif") no-repeat center center; /* 배경 이미지 + 오버레이 */
+    url("img/backgroud.gif") no-repeat center center; /* 배경 이미지 + 오버레이 */
   background-size: cover; /* 배경 이미지가 요소를 완전히 덮도록 크기 조절 */
   background-repeat: no-repeat; /* 배경 이미지가 반복되지 않도록 설정 */
   background-position: center center; /* 배경 이미지를 중앙에 배치 */
@@ -175,8 +175,9 @@ a:hover {
 }
 
 .portfolio-item .card-img-top {
-  height: 200px;
+  height: 500px;
   object-fit: cover;
+  width: 100%;
 }
 
 .portfolio-item .card-body {
