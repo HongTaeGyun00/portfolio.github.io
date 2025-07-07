@@ -175,7 +175,7 @@ a:hover {
 }
 
 .portfolio-item .card-img-top {
-  height: 500px;
+  height: 800px;
   object-fit: cover;
   width: 100%;
 }
